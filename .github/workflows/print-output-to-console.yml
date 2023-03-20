@@ -1,4 +1,5 @@
-
+name: Output meta data
+run-name: Get meta info
 
 on: [push]
 
@@ -16,6 +17,6 @@ jobs:
       - run: echo "The workflow is now ready to test your code on the runner"
       
       - name: List files in repository
-      - run: ls ${{ github.workspace }} 
+        run: ls ${{ github.workspace }} 
       - run: echo "This job status is ${{ job.status }}"
       
