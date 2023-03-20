@@ -1,0 +1,13 @@
+name: First github action ever created
+run-name: ${{ github.actor }} is testing github actions 🚀
+on: [push]
+jobs:
+  my-first-job: 
+    runs-on: ubuntu-latest
+    steps: 
+     - name: greeting
+       env: 
+         DEFAULT_GREETING_FIRST: Hi, my name is
+         FIRST_NAME: John Doe
+       run: echo $DEFAULT_GREETING_FIRST, $FIRST_NAME!
+  
