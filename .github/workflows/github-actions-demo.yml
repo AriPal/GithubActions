@@ -5,10 +5,21 @@ jobs:
   my-first-job: 
     runs-on: ubuntu-latest
     steps: 
+    
      - name: greeting
        env: 
          DEFAULT_GREETING_FIRST: Hi, my name is
          FIRST_NAME: John Doe
        run: |
           echo $DEFAULT_GREETING_FIRST, $FIRST_NAME!
-  
+          
+     - name: show directory
+       run: ls -l
+ 
+  my-second-job: 
+    runs-on: ubuntu-latest
+    steps: 
+     - name: show current directory
+       run: pwd
+       
+
