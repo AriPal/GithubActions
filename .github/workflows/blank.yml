@@ -1,0 +1,19 @@
+on: [push]
+
+jobs: 
+  Echo-Text-To-Terminal: 
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "The job was automatically triggered by ${{ github.actor }}"
+      - run: echo "The job is running on ${{ runner.os }}"
+      - run: echo "The name of the branch is ${{ github.ref_name }}"
+      
+      - name: check out repository code
+        uses: actions/checkout@v3
+      - run: echo "The ${{ github.repository }} has been cloned to the runner"
+      - run: echo "The workflow is now ready to test your code on the runner"
+      
+      - name: List files in repository
+        run: ls ${{ github.repository }} 
+      - run: echo "This job status is ${{ job.status }}
+      
