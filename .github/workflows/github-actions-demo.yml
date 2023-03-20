@@ -9,5 +9,6 @@ jobs:
        env: 
          DEFAULT_GREETING_FIRST: Hi, my name is
          FIRST_NAME: John Doe
-       run: echo $DEFAULT_GREETING_FIRST, $FIRST_NAME!
+       run: |
+          echo $DEFAULT_GREETING_FIRST, $FIRST_NAME!
   
